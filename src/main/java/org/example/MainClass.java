@@ -6,8 +6,8 @@ public class MainClass {
         System.out.println("test");
 
         int[] num1 = new int[]{1,2};
-        int[] num2 = new int[]{2,3};
-        System.out.println(FindMedianSortedArrays.findMedianSortedArrays(num1, num2));
+        int[] num2 = new int[]{3,4};
+        System.out.println(FindMedianSortedArrays.findMedianSortedList(num1, num2));
     }
 
 
