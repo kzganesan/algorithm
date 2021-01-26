@@ -25,11 +25,13 @@ public class FindMedianSortedArrays {
         int median = nums.size() / 2;
         if(nums.size()%2 == 0){
             int left = median - 1;
-            d = nums.get(median) + nums.get(left) / 2f;
+            System.out.println(nums.get(median));
+            System.out.println(nums.get(left));
+            d = (nums.get(median) + nums.get(left)) / 2f;
         }else{
             d = nums.get(median);
         }
-        System.out.println(nums.size());
+        System.out.println(d);
         return d;
     }
 

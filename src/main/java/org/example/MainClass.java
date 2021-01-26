@@ -7,7 +7,9 @@ public class MainClass {
 
         int[] num1 = new int[]{1,2};
         int[] num2 = new int[]{3,4};
-        System.out.println(FindMedianSortedArrays.findMedianSortedList(num1, num2));
+        //System.out.println(FindMedianSortedArrays.findMedianSortedList(num1, num2));
+
+        System.out.println(ReverseInt.reverse(112));
     }
 
 
