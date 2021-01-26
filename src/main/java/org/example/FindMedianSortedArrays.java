@@ -8,7 +8,7 @@ import java.util.Collections;
 
 public class FindMedianSortedArrays {
 
-    public static double findMedianSortedArrays(int[] nums1, int nums2[]){
+    public static double findMedianSortedList(int[] nums1, int nums2[]){
         double d = 2.0f;
 
         List<Integer> nums = new ArrayList<>();
@@ -31,5 +31,35 @@ public class FindMedianSortedArrays {
         }
         System.out.println(nums.size());
         return d;
+    }
+
+    public static double findMedianSortedArrays(int[] nums1, int[] nums2){
+        int[] nums = new int[nums1.length + nums2.length];
+        double d = 0f;
+
+        addArray(nums, nums1, 0);
+        addArray(nums, nums2, nums1.length);
+
+        Arrays.sort(nums);
+
+        int median = nums.length / 2;
+        if(nums.length%2 == 0){
+            int left = median - 1;
+            d = nums[median] + nums[left] / 2f;
+        }else{
+            d = nums[median];
+        }
+
+        return d;
+
+    }
+
+    public static int[] addArray(int[] nums, int[] nums1, int count){
+        for(int i=0; i< nums1.length; i++){
+            ///System.out.println(count + i);
+            nums[count + i] = nums1[i];
+        }
+
+        return nums;
     }
 }
