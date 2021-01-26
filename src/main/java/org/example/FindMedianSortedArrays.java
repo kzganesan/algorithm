@@ -19,6 +19,13 @@ public class FindMedianSortedArrays {
             nums.addAll(Arrays.stream(nums2).boxed().collect(Collectors.toList()));
         }
 
+        int median = nums.size() / 2;
+        if(nums.size()%2 == 0){
+            int left = median - 1;
+            d = nums.get(median) + nums.get(left) / 2f;
+        }else{
+            d = nums.get(median);
+        }
         System.out.println(nums.size());
         return d;
     }
