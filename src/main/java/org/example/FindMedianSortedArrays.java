@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
 import java.util.stream.Collectors;
+import java.util.Collections;
 
 public class FindMedianSortedArrays {
 
@@ -18,6 +19,8 @@ public class FindMedianSortedArrays {
         if(nums2 != null){
             nums.addAll(Arrays.stream(nums2).boxed().collect(Collectors.toList()));
         }
+
+        Collections.sort(nums);
 
         int median = nums.size() / 2;
         if(nums.size()%2 == 0){
