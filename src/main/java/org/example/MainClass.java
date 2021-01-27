@@ -12,8 +12,9 @@ public class MainClass {
 
         //System.out.println(ReverseInt.reverse(112));
 
-        System.out.println("aa".substring(1,2));
-        System.out.println(LongestPalindrome.longestPalindrome("aa"));
+        //System.out.println(LongestPalindrome.longestPalindrome("aa"));
+
+        System.out.println(StringToInteger.stringToInteger(" -123 aaa"));
     }
 
 
